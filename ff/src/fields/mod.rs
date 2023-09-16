@@ -352,8 +352,6 @@ pub trait PrimeField:
     Field<BasePrimeField = Self>
     + FftField<FftParams = <Self as PrimeField>::Params>
     + FromStr
-    + From<<Self as PrimeField>::BigInt>
-    + Into<<Self as PrimeField>::BigInt>
     + From<BigUint>
     + Into<BigUint>
 {

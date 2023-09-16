@@ -39,7 +39,7 @@ pub trait Group:
     + core::iter::Sum<Self>
     + for<'a> core::iter::Sum<&'a Self>
 {
-    type ScalarField: PrimeField + Into<<Self::ScalarField as PrimeField>::BigInt>;
+    type ScalarField: PrimeField;
 
     /// Returns `self + self`.
     #[must_use]
